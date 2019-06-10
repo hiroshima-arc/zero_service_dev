@@ -43,7 +43,7 @@ touch src/index.html
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register @babel/polyfill babel-plugin-istanbul cross-env nyc webpack webpack-cli webpack-dev-server babel-loader css-loader html-webpack-plugin mini-css-extract-plugin copy-webpack-plugin clean-webpack-plugin @babel/polyfill                                                                                                                                                                                                                                                               
 ```
 
-AWS Amplifyのセットアップ
+AWS Amplifyセットアップ
 ```bash
 npm install --save-dev @aws-amplify/cli aws-amplify
 npx amplify configure
@@ -53,6 +53,13 @@ npx amplify init
 **[⬆ back to top](#構成)**
 
 ### 配置
+
+Webサイト配置
+
+```bash
+npx amplify add hosting
+npx amplify publish
+```
 
 **[⬆ back to top](#構成)**
 
