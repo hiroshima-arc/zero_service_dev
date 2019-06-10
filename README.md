@@ -55,7 +55,6 @@ npx amplify init
 ### 配置
 
 Webサイト配置
-
 ```bash
 npx amplify add hosting
 npx amplify publish
@@ -64,6 +63,13 @@ npx amplify publish
 **[⬆ back to top](#構成)**
 
 ### 運用
+
+Webサイト運用
+```bash
+npx amplify update hosting
+npx amplify push
+npx amplify publish
+```
 
 **[⬆ back to top](#構成)**
 
