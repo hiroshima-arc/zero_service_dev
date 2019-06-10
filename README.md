@@ -21,13 +21,55 @@
 
 ### 構築
 
+#### 開発パッケージのセットアップ
+
+```bash
+npm init -y
+npm install --save-dev npm-run-all watch foreman cpx rimraf markdown-to-html
+npm install --save-dev prettier eslint babel-eslint
+npm install --save-dev browser-sync connect-browser-sync nodemon
+npx browser-sync init
+npx eslint --init
+touch Procfile
+```
+
+#### アプリケーションのセットアップ
+
+Webpackセットアップ
+```bash
+mkdir src
+touch src/index.js
+touch src/index.html
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register @babel/polyfill babel-plugin-istanbul cross-env nyc webpack webpack-cli webpack-dev-server babel-loader css-loader html-webpack-plugin mini-css-extract-plugin copy-webpack-plugin clean-webpack-plugin @babel/polyfill                                                                                                                                                                                                                                                               
+```
+
+AWS Amplifyセットアップ
+```bash
+npm install --save-dev @aws-amplify/cli aws-amplify
+npx amplify configure
+npx amplify init
+```
+
 **[⬆ back to top](#構成)**
 
 ### 配置
 
+Webサイト配置
+```bash
+npx amplify add hosting
+npx amplify publish
+```
+
 **[⬆ back to top](#構成)**
 
 ### 運用
+
+Webサイト運用
+```bash
+npx amplify update hosting
+npx amplify push
+npx amplify publish
+```
 
 **[⬆ back to top](#構成)**
 
