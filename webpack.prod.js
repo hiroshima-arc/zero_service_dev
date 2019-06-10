@@ -51,6 +51,14 @@ module.exports = {
       template: "./src/index.html",
       filename: "index.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/signin.html",
+      filename: "signin.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/service.html",
+      filename: "service.html"
+    }),
     new MiniCssExtractPlugin({
       filename: "./contents.css",
       chunkFilename: "[id].css"
@@ -58,8 +66,7 @@ module.exports = {
     new CopyPlugin([
       { from: 'src/css', to: 'css' },
       { from: 'src/img', to: 'img' },
-      { from: 'src/vendor', to: 'vendor' },
-      { from: 'src/page', to: 'page' }
+      { from: 'src/vendor', to: 'vendor' }
     ]),
     new CleanWebpackPlugin()
   ]

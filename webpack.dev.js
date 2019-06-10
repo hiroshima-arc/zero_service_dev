@@ -55,11 +55,18 @@ module.exports = {
       filename: "./contents.css",
       chunkFilename: "[id].css"
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/signin.html",
+      filename: "signin.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/service.html",
+      filename: "service.html"
+    }),
     new CopyPlugin([
       { from: 'src/css', to: 'css' },
       { from: 'src/img', to: 'img' },
-      { from: 'src/vendor', to: 'vendor' },
-      { from: 'src/page', to: 'page' }
+      { from: 'src/vendor', to: 'vendor' }
     ]),
     new CleanWebpackPlugin()
   ]
