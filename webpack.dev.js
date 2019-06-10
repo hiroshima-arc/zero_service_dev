@@ -56,6 +56,10 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
     new HtmlWebpackPlugin({
+      template: "./src/signup.html",
+      filename: "signup.html"
+    }),
+    new HtmlWebpackPlugin({
       template: "./src/signin.html",
       filename: "signin.html"
     }),
