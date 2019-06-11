@@ -1,0 +1,20 @@
+{
+    "appName": "ZeroServiceDev",
+    "roleName": "pinpointLambdaRole15b6f867",
+    "cloudWatchPolicyName": "cloudWatchPolicy15b6f867",
+    "pinpointPolicyName": "pinpointPolicy15b6f867",
+    "authPolicyName": "pinpoint_amplify_15b6f867",
+    "unauthPolicyName": "pinpoint_amplify_15b6f867",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

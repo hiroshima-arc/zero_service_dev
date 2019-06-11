@@ -1,6 +1,6 @@
 {
     "identityPoolName": "zeroservicedev0bac7cb9_identitypool_0bac7cb9",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "lambdaLogPolicy": "zerose_0bac7cb9_lambda_log_policy",
     "openIdLambdaRoleName": "zerose_0bac7cb9_openid_lambda_role",
     "openIdRolePolicy": "zerose_0bac7cb9_openid_pass_role_policy",

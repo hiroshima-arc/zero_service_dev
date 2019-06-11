@@ -68,6 +68,13 @@ npx amplify push
 npx amplify publish
 ```
 
+分析セットアップ
+```bash
+npx amplify add analytics
+npx amplify push
+npx amplify publish
+```
+
 **[⬆ back to top](#構成)**
 
 ### 運用
