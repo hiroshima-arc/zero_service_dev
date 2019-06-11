@@ -9,6 +9,11 @@
             "UnauthRoleName": "zeroservicedev-dev-20190610155950-unauthRole",
             "StackName": "zeroservicedev-dev-20190610155950",
             "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-dev-20190610155950/587f2120-8b4d-11e9-8c90-0aa3c9b7e68c"
+        },
+        "categories": {
+            "auth": {
+                "zeroservicedev0bac7cb9": {}
+            }
         }
     }
 }
