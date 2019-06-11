@@ -1,12 +1,12 @@
 {
-    "identityPoolName": "zeroservicedev0bac7cb9_identitypool_0bac7cb9",
+    "identityPoolName": "zeroservicedev5b7416b4_identitypool_5b7416b4",
     "allowUnauthenticatedIdentities": true,
-    "lambdaLogPolicy": "zerose_0bac7cb9_lambda_log_policy",
-    "openIdLambdaRoleName": "zerose_0bac7cb9_openid_lambda_role",
-    "openIdRolePolicy": "zerose_0bac7cb9_openid_pass_role_policy",
-    "openIdLambdaIAMPolicy": "zerose_0bac7cb9_openid_lambda_iam_policy",
-    "openIdLogPolicy": "zerose_0bac7cb9_openid_lambda_log_policy",
-    "userPoolName": "zeroservicedev0bac7cb9_userpool_0bac7cb9",
+    "lambdaLogPolicy": "zerose_5b7416b4_lambda_log_policy",
+    "openIdLambdaRoleName": "zerose_5b7416b4_openid_lambda_role",
+    "openIdRolePolicy": "zerose_5b7416b4_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "zerose_5b7416b4_openid_lambda_iam_policy",
+    "openIdLogPolicy": "zerose_5b7416b4_openid_lambda_log_policy",
+    "userPoolName": "zeroservicedev5b7416b4_userpool_5b7416b4",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -14,9 +14,9 @@
     "mfaTypes": [
         "SMS Text Message"
     ],
-    "roleName": "zerose0bac7cb9_sns-role",
-    "roleExternalId": "zerose0bac7cb9_role_external_id",
-    "policyName": "zerose0bac7cb9-sns-policy",
+    "roleName": "zerose5b7416b4_sns-role",
+    "roleExternalId": "zerose5b7416b4_role_external_id",
+    "policyName": "zerose5b7416b4-sns-policy",
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Your verification code",
@@ -27,7 +27,7 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientName": "zerose0bac7cb9_app_client",
+    "userpoolClientName": "zerose5b7416b4_app_client",
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
@@ -36,15 +36,15 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "mfaLambdaRole": "zerose0bac7cb9_totp_lambda_role",
-    "mfaLambdaLogPolicy": "zerose0bac7cb9_totp_lambda_log_policy",
-    "mfaPassRolePolicy": "zerose0bac7cb9_totp_pass_role_policy",
-    "mfaLambdaIAMPolicy": "zerose0bac7cb9_totp_lambda_iam_policy",
-    "userpoolClientLambdaRole": "zerose0bac7cb9_userpoolclient_lambda_role",
-    "userpoolClientLogPolicy": "zerose0bac7cb9_userpoolclient_lambda_log_policy",
-    "userpoolClientLambdaPolicy": "zerose0bac7cb9_userpoolclient_lambda_iam_policy",
+    "mfaLambdaRole": "zerose5b7416b4_totp_lambda_role",
+    "mfaLambdaLogPolicy": "zerose5b7416b4_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "zerose5b7416b4_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "zerose5b7416b4_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "zerose5b7416b4_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "zerose5b7416b4_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "zerose5b7416b4_userpoolclient_lambda_iam_policy",
     "userpoolClientSetAttributes": false,
-    "resourceName": "zeroservicedev0bac7cb9",
+    "resourceName": "zeroservicedev5b7416b4",
     "authSelections": "identityPoolAndUserPool",
     "authRoleName": {
         "Ref": "AuthRoleName"

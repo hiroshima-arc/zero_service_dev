@@ -1,18 +1,18 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "zeroservicedev-dev-20190610155950-authRole",
-            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-dev-20190610155950-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-dev-20190610155950-authRole",
+            "AuthRoleName": "zeroservicedev-dev-20190611171001-authRole",
+            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-dev-20190611171001-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-dev-20190611171001-authRole",
             "Region": "ap-northeast-1",
-            "DeploymentBucketName": "zeroservicedev-dev-20190610155950-deployment",
-            "UnauthRoleName": "zeroservicedev-dev-20190610155950-unauthRole",
-            "StackName": "zeroservicedev-dev-20190610155950",
-            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-dev-20190610155950/587f2120-8b4d-11e9-8c90-0aa3c9b7e68c"
+            "DeploymentBucketName": "zeroservicedev-dev-20190611171001-deployment",
+            "UnauthRoleName": "zeroservicedev-dev-20190611171001-unauthRole",
+            "StackName": "zeroservicedev-dev-20190611171001",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-dev-20190611171001/4fe17ad0-8c20-11e9-9c1e-06a690855d08"
         },
         "categories": {
             "auth": {
-                "zeroservicedev0bac7cb9": {}
+                "zeroservicedev5b7416b4": {}
             }
         }
     }

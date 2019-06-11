@@ -1,10 +1,10 @@
 {
     "appName": "ZeroServiceDev",
-    "roleName": "pinpointLambdaRole15b6f867",
-    "cloudWatchPolicyName": "cloudWatchPolicy15b6f867",
-    "pinpointPolicyName": "pinpointPolicy15b6f867",
-    "authPolicyName": "pinpoint_amplify_15b6f867",
-    "unauthPolicyName": "pinpoint_amplify_15b6f867",
+    "roleName": "pinpointLambdaRoleb9ff6e82",
+    "cloudWatchPolicyName": "cloudWatchPolicyb9ff6e82",
+    "pinpointPolicyName": "pinpointPolicyb9ff6e82",
+    "authPolicyName": "pinpoint_amplify_b9ff6e82",
+    "unauthPolicyName": "pinpoint_amplify_b9ff6e82",
     "authRoleName": {
         "Ref": "AuthRoleName"
     },

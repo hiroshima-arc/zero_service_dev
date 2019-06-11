@@ -1,13 +1,13 @@
 {
-	"hosting": {
-		"S3AndCloudFront": {
-			"service": "S3AndCloudFront",
+	"auth": {
+		"zeroservicedev5b7416b4": {
+			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"auth": {
-		"zeroservicedev0bac7cb9": {
-			"service": "Cognito",
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
 			"providerPlugin": "awscloudformation"
 		}
 	},
