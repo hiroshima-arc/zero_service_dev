@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "zeroservicedeva287c9a4",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "api94d27614",
+    "apiName": "api94d27614",
+    "functionArns": [
+        {
+            "lambdaFunction": "zeroservicedeva287c9a4"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "zeroservicedev-dev-20190611171001-authRole",
+        "unAuthRoleName": "zeroservicedev-dev-20190611171001-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "zeroservicedeva287c9a4",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

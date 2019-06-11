@@ -16,5 +16,52 @@
 			"service": "Pinpoint",
 			"providerPlugin": "awscloudformation"
 		}
+	},
+	"function": {
+		"zeroservicedeva287c9a4": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "zeroservicedev5b7416b4",
+					"attributes": [
+						"UserPoolId"
+					]
+				},
+				{
+					"category": "hosting",
+					"resourceName": "S3AndCloudFront",
+					"attributes": [
+						"HostingBucketName"
+					]
+				},
+				{
+					"category": "analytics",
+					"resourceName": "ZeroServiceDev",
+					"attributes": [
+						"Id",
+						"Region"
+					]
+				}
+			]
+		}
+	},
+	"api": {
+		"api94d27614": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "zeroservicedeva287c9a4",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
 	}
 }
