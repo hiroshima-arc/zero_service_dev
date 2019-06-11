@@ -10,6 +10,8 @@ import {
 
 import { signUpButtonClickEvent1, signUpButtonClickEvent2, signInButtonClickEvent, signOutButtonClickEvent } from "./javascript/analytics";
 
+import "./javascript/api";
+
 const SignUpButton = document.getElementById("sign-up");
 if (SignUpButton) SignUpButton.addEventListener("click", signUpEvent);
 
