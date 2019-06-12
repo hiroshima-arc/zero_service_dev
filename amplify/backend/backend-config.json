@@ -62,6 +62,13 @@
 					]
 				}
 			]
+		},
+		"ZeroServiceDev": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "AMAZON_COGNITO_USER_POOLS"
+			}
 		}
 	}
 }
