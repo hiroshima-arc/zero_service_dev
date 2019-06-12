@@ -46,6 +46,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register 
 AWS Amplifyセットアップ
 ```bash
 npm install --save-dev @aws-amplify/cli aws-amplify
+npm install --save aws-appsync graphql-tag
 npx amplify configure
 npx amplify init
 ```
@@ -54,10 +55,35 @@ npx amplify init
 
 ### 配置
 
-Webサイト配置
+Webサイトセットアップ
 ```bash
 npx amplify add hosting
+npx amplify push
 npx amplify publish
+```
+
+認証セットアップ
+```bash
+npx amplify add auth
+npx amplify push
+```
+
+分析セットアップ
+```bash
+npx amplify add analytics
+npx amplify push
+```
+
+APIセットアップ
+```bash
+npx amplify add api
+npx amplify push
+```
+
+ストレージセットアップ
+```bash
+npx amplify add storage
+npx amplify push
 ```
 
 **[⬆ back to top](#構成)**

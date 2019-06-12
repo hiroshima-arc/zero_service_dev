@@ -60,8 +60,16 @@ module.exports = {
       filename: "signup.html"
     }),
     new HtmlWebpackPlugin({
+      template: "./src/verify.html",
+      filename: "verify.html"
+    }),
+    new HtmlWebpackPlugin({
       template: "./src/signin.html",
       filename: "signin.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/forget.html",
+      filename: "forget.html"
     }),
     new HtmlWebpackPlugin({
       template: "./src/service.html",
