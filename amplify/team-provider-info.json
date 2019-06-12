@@ -32,5 +32,22 @@
                 "zeroservicedev5b7416b4": {}
             }
         }
+    },
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "zeroservicedev-production-20190612174201-authRole",
+            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-production-20190612174201-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-production-20190612174201-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "zeroservicedev-production-20190612174201-deployment",
+            "UnauthRoleName": "zeroservicedev-production-20190612174201-unauthRole",
+            "StackName": "zeroservicedev-production-20190612174201",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-production-20190612174201/f2cb7a70-8ced-11e9-b428-0aea6a80eeec"
+        },
+        "categories": {
+            "auth": {
+                "zeroservicedev5b7416b4": {}
+            }
+        }
     }
 }
