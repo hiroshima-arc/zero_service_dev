@@ -1,14 +1,31 @@
 {
-    "dev": {
+    "wip": {
         "awscloudformation": {
-            "AuthRoleName": "zeroservicedev-dev-20190611171001-authRole",
-            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-dev-20190611171001-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-dev-20190611171001-authRole",
+            "AuthRoleName": "zeroservicedev-wip-20190612160247-authRole",
+            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-wip-20190612160247-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-wip-20190612160247-authRole",
             "Region": "ap-northeast-1",
-            "DeploymentBucketName": "zeroservicedev-dev-20190611171001-deployment",
-            "UnauthRoleName": "zeroservicedev-dev-20190611171001-unauthRole",
-            "StackName": "zeroservicedev-dev-20190611171001",
-            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-dev-20190611171001/4fe17ad0-8c20-11e9-9c1e-06a690855d08"
+            "DeploymentBucketName": "zeroservicedev-wip-20190612160247-deployment",
+            "UnauthRoleName": "zeroservicedev-wip-20190612160247-unauthRole",
+            "StackName": "zeroservicedev-wip-20190612160247",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-wip-20190612160247/15ea9990-8ce0-11e9-bcfe-06ce06e5203e"
+        },
+        "categories": {
+            "auth": {
+                "zeroservicedev5b7416b4": {}
+            }
+        }
+    },
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "zeroservicedev-develop-20190612165125-authRole",
+            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-develop-20190612165125-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-develop-20190612165125-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "zeroservicedev-develop-20190612165125-deployment",
+            "UnauthRoleName": "zeroservicedev-develop-20190612165125-unauthRole",
+            "StackName": "zeroservicedev-develop-20190612165125",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-develop-20190612165125/e120f130-8ce6-11e9-b428-0aea6a80eeec"
         },
         "categories": {
             "auth": {

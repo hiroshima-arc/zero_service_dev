@@ -11,6 +11,7 @@ export const signUpEvent = () => {
 
   if (email === "") return alert("メールアドレスが未入力です");
   if (password === "") return alert("パスワードが未入力です");
+  if (password.length < 8) return alert("パスワードは8文字以上です");
   if (confirmPassword === "") return alert("確認パスワードが未入力です");
   if (password !== confirmPassword) return alert("パスワードが一致しません");
 
