@@ -74,6 +74,18 @@ npx amplify add analytics
 npx amplify push
 ```
 
+APIセットアップ
+```bash
+npx amplify add api
+npx amplify push
+```
+
+ストレージセットアップ
+```bash
+npx amplify add storage
+npx amplify push
+```
+
 **[⬆ back to top](#構成)**
 
 ### 運用
