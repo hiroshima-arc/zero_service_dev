@@ -46,6 +46,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register 
 AWS Amplifyセットアップ
 ```bash
 npm install --save-dev @aws-amplify/cli aws-amplify
+npm install --save aws-appsync graphql-tag
 npx amplify configure
 npx amplify init
 ```

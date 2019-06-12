@@ -12,6 +12,9 @@ import { signUpButtonClickEvent1, signUpButtonClickEvent2, signInButtonClickEven
 
 import "./javascript/api";
 
+import "./javascript/graphql";
+import "./javascript/appsync";
+
 const SignUpButton = document.getElementById("sign-up");
 if (SignUpButton) SignUpButton.addEventListener("click", signUpEvent);
 
