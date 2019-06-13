@@ -97,8 +97,8 @@
 				"Runtime": "nodejs8.10",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "zeroservicedev-develop-20190613131837-deployment",
-					"S3Key": "amplify-builds/zeroservicedev6d6c9a13-1560410153-latest-build.zip"
+					"S3Bucket": "zeroservicedev-production-20190613173050-deployment",
+					"S3Key": "amplify-builds/zeroservicedev6d6c9a13-1560414724-latest-build.zip"
 				}
 			}
 		},
