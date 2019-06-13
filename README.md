@@ -62,15 +62,15 @@ npx amplify push
 npx amplify publish
 ```
 
-認証セットアップ
-```bash
-npx amplify add auth
-npx amplify push
-```
-
 分析セットアップ
 ```bash
 npx amplify add analytics
+npx amplify push
+```
+
+認証セットアップ
+```bash
+npx amplify add auth
 npx amplify push
 ```
 

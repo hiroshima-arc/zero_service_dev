@@ -6,15 +6,19 @@ import { listTodos } from "../graphql/queries";
 import { createTodo } from "../graphql/mutations";
 import { onCreateTodo } from "../graphql/subscriptions";
 
-const client = new AWSAppSyncClient({
-  url: awsconfig.aws_appsync_graphqlEndpoint,
-  region: awsconfig.aws_appsync_region,
-  auth: {
-    type: AUTH_TYPE.AMAZON_COGNITO_USER_POOLS,
-    jwtToken: async () =>
-      (await Auth.currentSession()).getIdToken().getJwtToken()
-  }
-});
+const client = "";
+if (awsconfig.aws_appsync_graphqlEndpoint) {
+  client = new AWSAppSyncClient({
+    url: awsconfig.aws_appsync_graphqlEndpoint,
+    region: awsconfig.aws_appsync_region,
+    auth: {
+      type: AUTH_TYPE.AMAZON_COGNITO_USER_POOLS,
+      jwtToken: async () =>
+        (await Auth.currentSession()).getIdToken().getJwtToken()
+    }
+  });
+}
+
 export const query = () => {
   client
     .query({
