@@ -2,41 +2,25 @@ import Amplify, { Auth } from "aws-amplify";
 import awsconfig from "../aws-exports";
 Amplify.configure(awsconfig);
 
-const NOT_AUTH = "not authenticated";
+export const NOT_AUTH = "not authenticated";
 
-export const signUpEvent = () => {
-  const email = document.querySelector("#inputEmail").value;
-  const password = document.querySelector("#inputPassword").value;
-  const confirmPassword = document.querySelector("#confirmPassword").value;
-
-  if (email === "") return alert("メールアドレスが未入力です");
-  if (password === "") return alert("パスワードが未入力です");
-  if (password.length < 8) return alert("パスワードは8文字以上です");
-  if (confirmPassword === "") return alert("確認パスワードが未入力です");
-  if (password !== confirmPassword) return alert("パスワードが一致しません");
-
+export const signUp = (email, password, callback) => {
   Auth.signUp(email, password)
     .then(data => {
       alert("登録メールアドレスに検証コードを送信しました");
-      location.href = "/verify.html";
+      callback();
     })
     .catch(err => {
       console.log(err);
-      alert("エラーが発生しました");
+      alert(`エラーが発生しました:${err.message}`);
     });
 };
 
-export const verifyEvent = () => {
-  const email = document.querySelector("#inputVerifyEmail").value;
-  const code = document.querySelector("#inputVerifyCode").value;
-
-  if (email === "") return alert("メールアドレスが未入力です");
-  if (code === "") return alert("コードが未入力です");
-
-  Auth.confirmSignUp(email, code)
+export const verify = (email, code, callback) => {
+  Auth.confirmSignUp(email, code, callback)
     .then(data => {
       alert("ユーザ登録が完了しました。");
-      location.href = "./signin.html";
+      callback();
     })
     .catch(err => {
       console.log(err);
@@ -44,17 +28,11 @@ export const verifyEvent = () => {
     });
 };
 
-export const signInEvent = () => {
-  const email = document.querySelector("#inputEmail").value;
-  const password = document.querySelector("#inputPassword").value;
-
-  if (email === "") return alert("メールアドレスが未入力です");
-  if (password === "") return alert("パスワードが未入力です");
-
+export const signIn = (email, password, callback) => {
   Auth.signIn(email, password)
     .then(data => {
       alert("サインインに成功しました");
-      location.href = "./service.html";
+      callback();
     })
     .catch(err => {
       console.log(err);
@@ -62,11 +40,11 @@ export const signInEvent = () => {
     });
 };
 
-export const signOutEvent = () => {
+export const signOut = callback => {
   Auth.signOut()
     .then(data => {
       alert("サインアウトしました");
-      location.href = "./";
+      callback();
     })
     .catch(err => {
       console.log(err);
@@ -74,11 +52,7 @@ export const signOutEvent = () => {
     });
 };
 
-export const forgetEvent = () => {
-  const email = document.querySelector("#inputEmail").value;
-
-  if (email === "") return alert("メールアドレスが未入力です");
-
+export const forget = email => {
   Auth.forgotPassword(email)
     .then(data => {
       alert("送信に成功しました");
@@ -89,19 +63,11 @@ export const forgetEvent = () => {
     });
 };
 
-export const resetPasswordEvent = () => {
-  const email = document.querySelector("#inputEmail").value;
-  const code = document.querySelector("#inputCode").value;
-  const password = document.querySelector("#inputPassword").value;
-
-  if (email === "") return alert("メールアドレスが未入力です");
-  if (code === "") return alert("コードが未入力です");
-  if (password === "") return alert("パスワードが未入力です");
-
+export const resetPassword = (email, code, password, callback) => {
   Auth.forgotPasswordSubmit(email, code, password)
     .then(data => {
       alert("パスワードリセットに成功しました");
-      location.href = "./signin.html";
+      callback();
     })
     .catch(err => {
       console.log(err);
@@ -109,7 +75,7 @@ export const resetPasswordEvent = () => {
     });
 };
 
-export const currentUser = () => {
+export const currentUser = callback => {
   const filter = data => {
     console.log(data);
     return data === NOT_AUTH ? data : data.attributes.email;
@@ -118,11 +84,6 @@ export const currentUser = () => {
   Auth.currentAuthenticatedUser({
     bypassCache: false
   })
-    .then(user => renderCurrentUser(filter(user)))
-    .catch(err => renderCurrentUser(filter(err)));
-};
-
-const renderCurrentUser = data => {
-  if (data === NOT_AUTH) return (location.href = "./");
-  document.querySelector("#signin-user").value = data;
+    .then(user => callback(filter(user)))
+    .catch(err => callback(filter(err)));
 };
