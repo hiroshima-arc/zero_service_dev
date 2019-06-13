@@ -4,19 +4,19 @@ import * as mutations from "../graphql/mutations";
 import * as subscriptions from "../graphql/subscriptions";
 
 // Simple query
-const query = (async () => {
+export const query = async () => {
   const allTodos = await API.graphql(graphqlOperation(queries.listTodos));
   console.log(allTodos);
-})();
+};
 
 // Query using a parameter
-const queryWithParams = (async params => {
+export const queryWithParams = async params => {
   const oneTodo = await API.graphql(graphqlOperation(queries.getTodo, params));
   console.log(oneTodo);
-})({ id: "some id" });
+};
 
 // Mutation
-const mutation = async () => {
+export const mutation = async () => {
   const todoDetails = {
     name: "Todo 1",
     description: "Learn AWS AppSync"
@@ -30,7 +30,7 @@ const mutation = async () => {
 
 //mutation();
 
-const subscribe = () => {
+export const subscribe = () => {
   // Subscribe to creation of Todo
   const subscription = API.graphql(
     graphqlOperation(subscriptions.onCreateTodo)

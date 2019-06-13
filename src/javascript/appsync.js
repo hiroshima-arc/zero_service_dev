@@ -15,16 +15,17 @@ const client = new AWSAppSyncClient({
       (await Auth.currentSession()).getIdToken().getJwtToken()
   }
 });
+export const query = () => {
+  client
+    .query({
+      query: gql(listTodos)
+    })
+    .then(({ data: { listTodos } }) => {
+      console.log(listTodos.items);
+    });
+};
 
-client
-  .query({
-    query: gql(listTodos)
-  })
-  .then(({ data: { listTodos } }) => {
-    console.log(listTodos.items);
-  });
-
-const create = async () => {
+export const create = async () => {
   const result = await client.mutate({
     mutation: gql(createTodo),
     variables: {
@@ -37,20 +38,22 @@ const create = async () => {
   console.log(result.data.createTodo);
 };
 
-let subscription;
+export const subscribe = () => {
+  let subscription;
 
-(async () => {
-  subscription = client.subscribe({ query: gql(onCreateTodo) }).subscribe({
-    next: data => {
-      console.log(data.data.onCreateTodo);
-    },
-    error: error => {
-      console.warn(error);
-    }
-  });
-})();
+  (async () => {
+    subscription = client.subscribe({ query: gql(onCreateTodo) }).subscribe({
+      next: data => {
+        console.log(data.data.onCreateTodo);
+      },
+      error: error => {
+        console.warn(error);
+      }
+    });
+  })();
 
-// Unsubscribe after 10 secs
-setTimeout(() => {
-  subscription.unsubscribe();
-}, 10000);
+  // Unsubscribe after 10 secs
+  setTimeout(() => {
+    subscription.unsubscribe();
+  }, 10000);
+};
