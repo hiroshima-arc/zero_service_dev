@@ -6,7 +6,7 @@ import { listTodos } from "../graphql/queries";
 import { createTodo } from "../graphql/mutations";
 import { onCreateTodo } from "../graphql/subscriptions";
 
-const client = "";
+let client = "";
 if (awsconfig.aws_appsync_graphqlEndpoint) {
   client = new AWSAppSyncClient({
     url: awsconfig.aws_appsync_graphqlEndpoint,

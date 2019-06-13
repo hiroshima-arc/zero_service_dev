@@ -1,0 +1,10 @@
+{
+    "AppSyncApiName": "ZeroServiceDev",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authzeroservicedevaf8b432a",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

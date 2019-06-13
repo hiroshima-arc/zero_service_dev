@@ -1,0 +1,19 @@
+{
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "zeroservicedev-develop-20190613131837-authRole",
+            "UnauthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-develop-20190613131837-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::411087959999:role/zeroservicedev-develop-20190613131837-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "zeroservicedev-develop-20190613131837-deployment",
+            "UnauthRoleName": "zeroservicedev-develop-20190613131837-unauthRole",
+            "StackName": "zeroservicedev-develop-20190613131837",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:411087959999:stack/zeroservicedev-develop-20190613131837/50e66990-8d92-11e9-b7d7-068e2b92c6b0"
+        },
+        "categories": {
+            "auth": {
+                "zeroservicedevaf8b432a": {}
+            }
+        }
+    }
+}

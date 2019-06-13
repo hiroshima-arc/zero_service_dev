@@ -1,0 +1,36 @@
+{
+    "permissions": {
+        "hosting": {
+            "S3AndCloudFront": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "auth": {
+            "zeroservicedevaf8b432a": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "analytics": {
+            "ZeroServiceDev": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "api": {
+            "ZeroServiceDev": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        }
+    }
+}

@@ -4,7 +4,7 @@ import awsconfig from "../aws-exports";
 Amplify.configure(awsconfig);
 
 export const apiCall = () => {
-  let apiName = "api94d27614";
+  let apiName = awsconfig.aws_cloud_logic_custom[0].name;
   let path = "/items";
   let myInit = {
     // OPTIONAL
